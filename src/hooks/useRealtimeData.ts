@@ -22,7 +22,7 @@ export function useRealtimeFFT(updateInterval: number = 100) {
 
     const animate = () => {
       generateData();
-      animationRef.current = setTimeout(() => {
+      animationRef.current = window.setTimeout(() => {
         requestAnimationFrame(animate);
       }, updateInterval);
     };
@@ -63,7 +63,7 @@ export function useSpectrogramData(historyLength: number = 60) {
 
     const animate = () => {
       generateFrame();
-      animationRef.current = setTimeout(() => {
+      animationRef.current = window.setTimeout(() => {
         requestAnimationFrame(animate);
       }, 100);
     };
